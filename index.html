@@ -15,14 +15,39 @@
   <title>Document</title>
 </head>
 <body>
+
   <h1>Shared Post to TruthSocial</h1>
+
   <a 
-    href="
-      https://truthsocial.com/share?
-      text=Trump%E2%80%99s%20Truth%20Social%20App%20Launches%20on%20Apple%E2%80%99s%20App%20Store%20on%20Presidents%E2%80%99%20Day%20Holiday
-      &url=https%3A%2F%2Fwww.theepochtimes.com%2Ftrumps-truth-social-app-launches-on-apples-app-store-on-presidents-day-holiday_4291622.html
-      " target="_blank">
-    Share on Truth Social
+    id="aTagElement"
+    target="_blank"
+  > Share my website on Truth Social </a>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <a href="
+    https://truthsocial.com/share?
+    text=Trump%E2%80%99s%20Truth%20Social%20App%20Launches%20on%20Apple%E2%80%99s%20App%20Store%20on%20Presidents%E2%80%99%20Day%20Holiday
+    &url=https%3A%2F%2Fwww.theepochtimes.com%2Ftrumps-truth-social-app-launches-on-apples-app-store-on-presidents-day-holiday_4291622.html
+    " target="_blank">
+    Share the documentation example on Truth Social
   </a>
+
+  <script>
+    const aTagElement = document.querySelector("#aTagElement");
+
+    const currentUrl = encodeURI(window.location.href);
+    const mess = encodeURIComponent("Awesome mess here.");
+    const title = encodeURIComponent("Awesome title here.");
+
+    aTagElement.href = `
+      https://truthsocial.com/share?rul=${currentUrl}&title={title}&text={mess}
+    `;
+  </script>
+
 </body>
 </html>
